@@ -1,14 +1,11 @@
 package web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import web.model.User;
 import web.service.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
@@ -44,10 +41,11 @@ public class UserController {
         return modelAndView;
     }
 
-    @PostMapping(value = "/edit")
-    public ModelAndView editUser(@ModelAttribute("user") User user){
+    @PostMapping(value = "/edit/{id}")
+    public ModelAndView editUser(@ModelAttribute("user") User user, @PathVariable("id") int id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
+        user.setId(id);
         userService.edit(user);
         return modelAndView;
     }

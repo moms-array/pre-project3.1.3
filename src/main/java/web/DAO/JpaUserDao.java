@@ -1,4 +1,4 @@
-package web.repository;
+package web.DAO;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -7,12 +7,10 @@ import web.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import java.sql.PreparedStatement;
 import java.util.List;
 
 @Component
-@Transactional
-public class JpaUserDAO implements UserRepository{
+public class JpaUserDao implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -23,7 +21,7 @@ public class JpaUserDAO implements UserRepository{
     }
 
     @Override
-    public User getById(int id) {
+    public User getById(long id) {
         TypedQuery<User> query = entityManager.createQuery("select u from User u where u.id = :id",User.class);
         query.setParameter("id",id);
         return query.getResultList().stream().findAny().orElse(null);
@@ -43,7 +41,6 @@ public class JpaUserDAO implements UserRepository{
     @Override
     public void edit(User user) {
         entityManager.merge(user);
-        entityManager.flush();
-        entityManager.close();
+
     }
 }

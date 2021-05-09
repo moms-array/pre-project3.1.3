@@ -8,41 +8,47 @@ import web.model.User;
 import web.repository.UserRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Transactional
 public class UserServiceImp implements UserService {
 
-    @Autowired
+
     private UserRepository userRepository;
 
-    @Transactional
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public List<User> getListUser() {
-        return userRepository.getListUser();
+        return userRepository.findAll();
 
     }
 
-    @Transactional
     @Override
-    public User getById(int id) {
-        return userRepository.getById(id);
+    public Optional<User> getById(long id) {
+        return userRepository.findById(id);
     }
 
-    @Transactional
     @Override
     public void add(User user) {
-        userRepository.add(user);
+        userRepository.save(user);
     }
 
-    @Transactional
     @Override
     public void delete(User user) {
         userRepository.delete(user);
     }
 
-    @Transactional
     @Override
     public void edit(User user) {
-        userRepository.edit(user);
+        userRepository.save(user);
     }
 }

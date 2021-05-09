@@ -10,7 +10,7 @@ public class User {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "lastname")
@@ -22,7 +22,7 @@ public class User {
     public User() {
     }
 
-    public User(int id, String name, String lastname) {
+    public User(long id, String name, String lastname) {
         this.id = id;
         this.name = name;
         this.lastname = lastname;
@@ -32,7 +32,7 @@ public class User {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

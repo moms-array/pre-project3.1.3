@@ -1,14 +1,13 @@
 package web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import web.model.User;
 import web.service.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Optional;
 
 @Controller
 public class UserController {
@@ -21,6 +20,7 @@ public class UserController {
     public UserService getUsers() {
         return userService;
     }
+
     @Autowired
     public void setUsers(UserService userService) {
         this.userService = userService;
@@ -37,17 +37,18 @@ public class UserController {
 
     @GetMapping(value = "/edit/{id}")
     public ModelAndView editPage(@PathVariable("id") int id){
-        User user = userService.getById(id);
+        User user = userService.getById(id).get();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("editPage");
         modelAndView.addObject("user",user);
         return modelAndView;
     }
 
-    @PostMapping(value = "/edit")
-    public ModelAndView editUser(@ModelAttribute("user") User user){
+    @PostMapping(value = "/edit/{id}")
+    public ModelAndView editUser(@ModelAttribute("user") User user, @PathVariable("id") int id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
+        user.setId(id);
         userService.edit(user);
         return modelAndView;
     }
@@ -74,8 +75,8 @@ public class UserController {
     public ModelAndView deleteUser(@PathVariable("id") int id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
-        User user = userService.getById(id);
-        userService.delete(user);;
+        User user = userService.getById(id).get();
+        userService.delete(user);
         return modelAndView;
     }
 

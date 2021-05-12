@@ -9,43 +9,92 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/web/controller/UserController.java&#10;#&#9;src/main/java/web/model/User.java&#10;#&#9;src/main/java/web/repository/UserRepository.java&#10;#&#9;src/main/java/web/service/UserService.java&#10;#&#9;src/main/java/web/service/UserServiceImp.java&#10;#&#9;target/2.2.2.Spring_MVC/WEB-INF/classes/web/repository/JpaUserDAO.class&#10;#&#9;target/classes/web/repository/JpaUserDAO.class">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_1_RELEASE.xml" afterDir="false" />
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="start">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_1_spec_1_0_0_Beta1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_6_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_6_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_6_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/editPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/editPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/DAO/JpaUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/DAO/JpaUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/editPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/editPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/DAO/JpaUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/DAO/JpaUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/DAO/JpaUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/DAO/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/config/AppInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/config/HibernateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/classes/web/service/UserServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/aspectjrt-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/attoparser-2.0.4.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/classmate-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/hibernate-core-5.2.9.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/mysql-connector-java-8.0.24.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/protobuf-java-3.11.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/slf4j-api-1.7.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-aop-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-beans-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-context-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-core-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-data-commons-2.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-data-jpa-2.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-expression-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-jcl-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-jdbc-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-orm-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-tx-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-web-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/spring-webmvc-5.3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/thymeleaf-3.0.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/thymeleaf-spring5-3.0.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/lib/unbescape-1.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/editPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/2.2.2.Spring_MVC/WEB-INF/pages/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/DAO/JpaUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/DAO/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/AppInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/HibernateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,19 +151,23 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\khaly\IdeaProjects\pre-project2.3.1Entity\src\webapp\WEB-INF\pages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/spring_mvc_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="spring-mvc:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/spring_mvc_war_exploded" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="824f0d1b-e26a-4b04-acb9-747510bab36f" />
+        <option name="BASE_DIRECTORY_NAME" value="9141c52c-8aed-4a6c-aca4-8c2970ad3651" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -122,7 +175,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61205" />
+        <option name="DEBUG_PORT" value="49654" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -202,7 +255,7 @@
       <updated>1620764636159</updated>
       <workItem from="1620764668369" duration="3778000" />
       <workItem from="1620768727532" duration="942000" />
-      <workItem from="1620806644501" duration="13108000" />
+      <workItem from="1620806644501" duration="15876000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -225,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620816251177</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="start">
+      <created>1620823592722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620823592722</updated>
+    </task>
+    <task id="LOCAL-00005" summary="start">
+      <created>1620823684905</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620823684905</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,24 +313,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change session to entity" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/web/controller/UserController.java&#10;#&#9;src/main/java/web/model/User.java&#10;#&#9;src/main/java/web/repository/UserRepository.java&#10;#&#9;src/main/java/web/service/UserService.java&#10;#&#9;src/main/java/web/service/UserServiceImp.java&#10;#&#9;target/2.2.2.Spring_MVC/WEB-INF/classes/web/repository/JpaUserDAO.class&#10;#&#9;target/classes/web/repository/JpaUserDAO.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/web/controller/UserController.java&#10;#&#9;src/main/java/web/model/User.java&#10;#&#9;src/main/java/web/repository/UserRepository.java&#10;#&#9;src/main/java/web/service/UserService.java&#10;#&#9;src/main/java/web/service/UserServiceImp.java&#10;#&#9;target/2.2.2.Spring_MVC/WEB-INF/classes/web/repository/JpaUserDAO.class&#10;#&#9;target/classes/web/repository/JpaUserDAO.class" />
+    <MESSAGE value="start" />
+    <option name="LAST_COMMIT_MESSAGE" value="start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/UserController.java</url>
-          <line>68</line>
+          <line>86</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/UserController.java</url>
-          <line>67</line>
+          <line>85</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/UserController.java</url>
-          <line>57</line>
+          <line>75</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

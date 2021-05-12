@@ -12,6 +12,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import web.security.handler.LoginSuccessHandler;
+import web.service.MyUserDetailService;
 
 @Configuration
 @EnableWebSecurity
@@ -19,11 +20,11 @@ import web.security.handler.LoginSuccessHandler;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private AuthProviderImpl authProvider;
+    private MyUserDetailService userDetailService;
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authProvider);
+        auth.userDetailsService(userDetailService);
     }
 
     @Override

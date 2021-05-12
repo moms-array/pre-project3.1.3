@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class UserController {
@@ -29,29 +28,13 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "hello", method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
-        List<String> messages = new ArrayList<>();
-        messages.add("Hello!");
-        messages.add("I'm Spring MVC-SECURITY application");
-        messages.add("5.2.0 version by sep'19 ");
-        model.addAttribute("messages", messages);
-        return "hello";
-    }
-
-    @RequestMapping(value = "login", method = RequestMethod.GET)
-    public String loginPage() {
-        return "login";
-    }
-
-    @GetMapping(value = "/")
-    public ModelAndView getUser(){
+    @GetMapping(value = "/users")
+    public ModelAndView listUsers(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("list");
+        modelAndView.setViewName("users");
         modelAndView.addObject("users", userService.getListUser());
         return modelAndView;
     }
-
 
     @GetMapping(value = "/edit/{id}")
     public ModelAndView editPage(@PathVariable("id") int id){
@@ -76,7 +59,7 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
         user.setId(1L);
-        modelAndView.setViewName("add");
+        modelAndView.setViewName("auth/sign_up");
         modelAndView.addObject(user);
         return modelAndView;
     }

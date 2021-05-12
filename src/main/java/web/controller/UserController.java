@@ -45,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/edit/{id}")
-    public ModelAndView editUser(@ModelAttribute("user") User user, @PathVariable("id") int id){
+    public ModelAndView editUser(@ModelAttribute("user") User user, @PathVariable("id") Long id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
         user.setId(id);
@@ -57,7 +57,7 @@ public class UserController {
     public ModelAndView addPage(){
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
-        user.setId(1);
+        user.setId(1L);
         modelAndView.setViewName("add");
         modelAndView.addObject(user);
         return modelAndView;

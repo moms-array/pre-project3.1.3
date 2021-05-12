@@ -18,6 +18,7 @@
             <th>name</th>
             <th>lastname</th>
             <th>email</th>
+            <th>password</th>
             <th>edit</th>
             <th>delete</th>
         </tr>
@@ -27,6 +28,7 @@
             <td th:text="${user.name}">name</td>
             <td th:text="${user.lastname}">lastname</td>
             <td th:text="${user.email}">email</td>
+            <td th:text="${user.password}">password</td>
             <td><a th:href="@{/edit/{id}(id = ${user.getId()})}"> edit </a>  </td>
             <td><a th:href="@{/delete/{id}(id = ${user.getId()})}" >delete</a> </td>
         </tr>

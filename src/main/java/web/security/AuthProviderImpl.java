@@ -7,13 +7,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import web.model.User;
 import web.repository.UserRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Component
 public class AuthProviderImpl implements AuthenticationProvider {
@@ -32,7 +32,7 @@ public class AuthProviderImpl implements AuthenticationProvider {
         if (!password.equals(user.getPassword())){
             throw new BadCredentialsException("bad credentials");
         }
-        List<GrantedAuthority> authority = new ArrayList<>();
+        List<GrantedAuthority> authority = new ArrayList<>(user.getRoles());
         return new UsernamePasswordAuthenticationToken(user,null,authority);
     }
 

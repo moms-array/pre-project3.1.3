@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -19,34 +20,30 @@ import web.service.MyUserDetailService;
 @ComponentScan("web.security")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Bean
+    public UserDetailsService getuserDetailService(){
+        return new MyUserDetailService();
+    }
+
     @Autowired
-    private MyUserDetailService userDetailService;
+    private LoginSuccessHandler loginSuccessHandler;
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailService);
+        auth.userDetailsService(getuserDetailService());
     }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/sign_up","/login").anonymous()
-                .antMatchers("/users").authenticated()
-                .and().csrf().disable()
+                .antMatchers("/hello").permitAll()
+                .antMatchers("/admin/**").access("hasRole('ADMIN')")
+                .antMatchers("/user/**").access("hasAnyRole('ADMIN','USER')")
+                .and()
                 .formLogin()
-                .loginPage("/login")
-                .loginProcessingUrl("/login/process")
-                .usernameParameter("j_username")
-                .passwordParameter("j_password")
-                .and().logout();
+                .successHandler(loginSuccessHandler);
 
-        http
-                // делаем страницу регистрации недоступной для авторизированных пользователей
-                .authorizeRequests()
-                //страницы аутентификаци доступна всем
-                .antMatchers("/login").anonymous()
-                // защищенные URL
-                .antMatchers("/hello").access("hasAnyRole('ADMIN')").anyRequest().authenticated();
     }
 
     @Bean

@@ -25,15 +25,15 @@
 
         <tr th:each="user, state: ${users}">
             <td th:text="${user.id}">id</td>
-            <td th:text="${user.name}">name</td>
+            <td th:text="${user.username}">name</td>
             <td th:text="${user.lastname}">lastname</td>
             <td th:text="${user.email}">email</td>
             <td th:text="${user.password}">password</td>
-            <td><a th:href="@{/edit/{id}(id = ${user.getId()})}"> edit </a>  </td>
-            <td><a th:href="@{/delete/{id}(id = ${user.getId()})}" >delete</a> </td>
+            <td><a th:href="@{/admin/edit/{id}(id = ${user.getId()})}"> edit </a>  </td>
+            <td><a th:href="@{/admin/delete/{id}(id = ${user.getId()})}" >delete</a> </td>
         </tr>
     </table>
-    <a href="@{/add}">add user</a>
+    <a href="/admin/add">add user</a>
     </br>
     <a href="/logout">logout</a>
 </body>

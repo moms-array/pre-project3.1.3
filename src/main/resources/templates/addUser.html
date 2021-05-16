@@ -6,7 +6,8 @@
     <title>Title</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/add}" th:object="${user}">
+<div>
+<form method="POST" action="/admin/add" th:object="${user}">
 
     <label for = "username">Enter name </label>
     <input type="text" th:field = "*{username}" id = "username"/>
@@ -30,6 +31,7 @@
 
 </form>
 <a href="/logout">logout</a>
+</div>
 
 </body>
 </html>

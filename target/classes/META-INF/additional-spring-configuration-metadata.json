@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.hibernate.show_sql",
+      "type": "java.lang.String",
+      "description": "Description for spring.hibernate.show_sql."
+  }
+] }

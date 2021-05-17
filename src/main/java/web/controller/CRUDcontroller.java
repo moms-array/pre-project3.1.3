@@ -3,20 +3,23 @@ package web.controller;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import web.model.User;
-import web.service.MyUserDetailService;
-import org.springframework.stereotype.Controller;
+import web.service.UserService;
 
 @RestController
 @RequestMapping("/admin")
 @Log
 public class CRUDcontroller {
 
+    private UserService userService;
+
     @Autowired
-    private MyUserDetailService userService;
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 
     CRUDcontroller(){
     }
@@ -39,9 +42,11 @@ public class CRUDcontroller {
     }
 
     @PostMapping(value = "/edit")
+    @Transactional
     public ModelAndView editUser(@ModelAttribute User user){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/users");
+        modelAndView.setViewName("redirect:/admin/users");
+        user.setRoles(userService.findUserById(user.getId()).getRoles());
         userService.saveUser(user);
         return modelAndView;
     }

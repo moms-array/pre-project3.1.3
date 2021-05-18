@@ -2,6 +2,7 @@ package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import web.model.Role;
 import web.model.User;
 import web.repository.UserRepository;
@@ -19,6 +20,7 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
+    @Transactional
     public User findUserById(Long id){
         return userRepository.findById(id).get();
     }

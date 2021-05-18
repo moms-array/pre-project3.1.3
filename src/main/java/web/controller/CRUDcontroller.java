@@ -34,6 +34,14 @@ public class CRUDcontroller {
         return modelAndView;
     }
 
+    @GetMapping("/findOne")
+    @ResponseBody
+    public User finOne(Long id){
+        User user = userService.findUserById(id);
+        return user ;
+    }
+
+
     @GetMapping(value = "/edit/{id}")
     public ModelAndView editPage(@PathVariable("id") Long id){
         User user = userService.findUserById(id);
@@ -53,17 +61,26 @@ public class CRUDcontroller {
         return modelAndView;
     }
 
-    @GetMapping(value = "/add")
-    public ModelAndView addPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        User user = new User();
-        modelAndView.setViewName("addUser");
-        modelAndView.addObject(user);
-        return modelAndView;
-    }
+//    @GetMapping(value = "/add")
+//    public ModelAndView addPage(){
+//        ModelAndView modelAndView = new ModelAndView();
+//        User user = new User();
+//        modelAndView.setViewName("addUser");
+//        modelAndView.addObject(user);
+//        return modelAndView;
+//    }
 
     @PostMapping(value = "/add")
-    public ModelAndView addUser(@ModelAttribute("user") User user){
+    @ResponseBody
+    public ModelAndView addUser(@ModelAttribute("user") User user, @RequestParam("addname") String username,
+                                @RequestParam("addlastname") String lastname,
+                                @RequestParam("addemail") String email,
+                                @RequestParam("addpassword") String password){
+        user.setUsername(username);
+        user.setLastname(lastname);
+        user.setEmail(email);
+        user.setPassword(password);
+
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/admin/users");
         userService.addUser(user);

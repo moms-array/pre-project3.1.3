@@ -34,4 +34,11 @@ public class UserController {
         modelAndView.addObject("user", user);
         return modelAndView;
     }
+
+    @GetMapping(value = "/index")
+    public ModelAndView mainPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
 }

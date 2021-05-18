@@ -1,6 +1,7 @@
 package web.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -33,6 +34,7 @@ public class User implements UserDetails {
     @JoinTable(name = "users_roles",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @JsonBackReference
     private Set<Role> roles;
 
     public Set<Role> getRoles() {

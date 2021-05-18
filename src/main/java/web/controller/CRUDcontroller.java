@@ -6,8 +6,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import web.model.Role;
 import web.model.User;
 import web.service.UserService;
+
+import java.util.Set;
 
 @RestController
 @RequestMapping("/admin")
@@ -25,7 +28,6 @@ public class CRUDcontroller {
     }
     @GetMapping(value = "/users")
     public ModelAndView listUsers(Authentication authentication){
-        System.out.println(authentication.getPrincipal());
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/users");
         modelAndView.addObject("users", userService.userList());

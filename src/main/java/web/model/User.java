@@ -3,12 +3,13 @@ package web.model;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "user")
@@ -95,7 +96,12 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return getRoles();
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        getRoles().forEach(x -> {
+            GrantedAuthority authority = new SimpleGrantedAuthority(x.getRole());
+            authorities.add(authority);
+        });
+        return authorities;
     }
 
     @Override

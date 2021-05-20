@@ -34,7 +34,6 @@ public class UserServiceImpl implements UserService {
         if(userFromBd == null){
             return false;
         }
-        user.setRoles(Collections.singleton(new Role(2L,"USER")));
         userRepository.save(user);
         return true;
     }
@@ -55,6 +54,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(User user){
+        user.setRoles(Collections.singleton(new Role(2L,"USER")));
         userRepository.save(user);
     }
 
@@ -62,5 +62,4 @@ public class UserServiceImpl implements UserService {
     public User findByUserName(String name){
         return userRepository.findByUsername(name);
     }
-
 }

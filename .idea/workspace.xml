@@ -10,29 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="change getAuthority">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4429d3f4-86e9-4a4c-8f27-2fd3cedec340.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4429d3f4-86e9-4a4c-8f27-2fd3cedec340.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/handler/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/handler/LoginSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/security/AuthProviderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/AuthProviderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/security/handler/LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/handler/LoginSuccessHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +148,8 @@
       <workItem from="1621261832844" duration="2598000" />
       <workItem from="1621322443617" duration="33594000" />
       <workItem from="1621407957060" duration="40864000" />
-      <workItem from="1621492658849" duration="13623000" />
+      <workItem from="1621492658849" duration="14379000" />
+      <workItem from="1621520431185" duration="10839000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -237,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621350395061</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="change getAuthority">
+      <created>1621508464787</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621508464787</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,19 +265,14 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="48" />
+          <line>56</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

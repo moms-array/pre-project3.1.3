@@ -10,6 +10,7 @@ import web.model.Role;
 import web.model.User;
 import web.service.UserService;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @RestController
@@ -37,8 +38,7 @@ public class CRUDcontroller {
     @GetMapping("/findOne")
     @ResponseBody
     public User finOne(Long id){
-        User user = userService.findUserById(id);
-        return user ;
+        return userService.findUserById(id);
     }
 
 
@@ -51,8 +51,7 @@ public class CRUDcontroller {
         return modelAndView;
     }
 
-    @PostMapping(value = "/edit")
-    @Transactional
+    @PatchMapping(value = "/edit")
     public ModelAndView editUser(@ModelAttribute User user){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/admin/users");
@@ -61,21 +60,12 @@ public class CRUDcontroller {
         return modelAndView;
     }
 
-//    @GetMapping(value = "/add")
-//    public ModelAndView addPage(){
-//        ModelAndView modelAndView = new ModelAndView();
-//        User user = new User();
-//        modelAndView.setViewName("addUser");
-//        modelAndView.addObject(user);
-//        return modelAndView;
-//    }
-
     @PostMapping(value = "/add")
-    @ResponseBody
-    public ModelAndView addUser(@ModelAttribute("user") User user, @RequestParam("addname") String username,
+    public ModelAndView addUser(@RequestParam("addname") String username,
                                 @RequestParam("addlastname") String lastname,
                                 @RequestParam("addemail") String email,
                                 @RequestParam("addpassword") String password){
+        User user = new User();
         user.setUsername(username);
         user.setLastname(lastname);
         user.setEmail(email);
@@ -87,12 +77,11 @@ public class CRUDcontroller {
         return modelAndView;
     }
 
-    @GetMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ModelAndView deleteUser(@PathVariable("id") Long id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/admin/users");
-        User user = userService.findUserById(id);
-        userService.deleteUser(user.getId());
+        userService.deleteUser(id);
         return modelAndView;
     }
 

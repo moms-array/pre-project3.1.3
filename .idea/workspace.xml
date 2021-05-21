@@ -9,28 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/authController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/authController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/handler/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/handler/LoginSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/addUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/authController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/authController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/security/handler/LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/handler/LoginSuccessHandler.class" afterDir="false" />
-    </list>
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="далил лишние html, &#10;сфорировал лк для админ и для юзера" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +144,7 @@
       <workItem from="1621265198967" duration="888000" />
       <workItem from="1621318027764" duration="2693000" />
       <workItem from="1621591015035" duration="152000" />
-      <workItem from="1621591227243" duration="5120000" />
+      <workItem from="1621591227243" duration="5429000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -223,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621083043730</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="далил лишние html, &#10;сфорировал лк для админ и для юзера">
+      <created>1621596799037</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621596799037</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +234,8 @@
     <MESSAGE value="second" />
     <MESSAGE value="добавил fetch eager&#10;добавил секьюрность userDeatailsService&#10;поправил контроллер с crud на доступ только для админа" />
     <MESSAGE value="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий" />
-    <option name="LAST_COMMIT_MESSAGE" value="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий" />
+    <MESSAGE value="далил лишние html, &#10;сфорировал лк для админ и для юзера" />
+    <option name="LAST_COMMIT_MESSAGE" value="далил лишние html, &#10;сфорировал лк для админ и для юзера" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

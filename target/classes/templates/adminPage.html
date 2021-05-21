@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:line-height="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+
+</head>
+<body>
+<div th:fragment="footer">
+    <div class="container-fluid" style="background-color: black">
+        <div class="p-3 text-white">
+        <footer>
+            <span sec:authorize = "isAuthenticated()">
+                <span sec:authentication="name"></span>
+                with roles
+                <span sec:authentication="principal.authorities"></span>
+                <span style="background-color: black; color: white; line-height: normal ;position: absolute; text-align: right; right: 6px"><a href="/logout">Sign out</a></span>
+            </span>
+        </footer>
+        </div>
+    </div>
+</div>
+
+
+<div class = "container-fluid">
+    <div class = "row">
+        <div class="col-md-2">
+            <div><a th:href="@{/admin/adminPageInfo}">User</a></div>
+            <div><a href=" " >Admin </a> </div>
+        </div>
+        <div class="col-md-10">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#AllUsers" role="tab" aria-controls="home" aria-selected="true">All users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#NewUser" role="tab" aria-controls="profile" aria-selected="false">New user</a>
+                </li>
+
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="AllUsers" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container" >
+                        <div class = "card">
+                    <div class = "card-block">
+                            <table class="table table-hover">
+                                <div>All users</div>
+                                <thead>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Lastname</th>
+                                <th>email</th>
+                                <th>password</th>
+                                <th>roles</th>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="user: ${users}">
+                                        <td th:text="${user.id}">id</td>
+                                        <td th:text="${user.username}">name</td>
+                                        <td th:text="${user.lastname}">lastname</td>
+                                        <td th:text="${user.email}">email</td>
+                                        <td th:text="${user.password}">password</td>
+                                        <td th:text="${user.getAuthorities()}"></td>
+                                        <td>
+                                            <button  type="button" th:href="@{/admin/findOne/(id = ${user.id})}" class="btn btn-primary eBtn" >edit</button>
+                                        </td>
+                                        <td>
+                                            <form id = "delete" th:action="@{/admin/delete/{id}(id = ${user.getId()})}" th:method="delete">
+                                                <button type="submit" class="btn-danger" >delete</button>
+                                            </form>
+                                        </td>
+
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="tab-pane" id="NewUser" role="tabpanel" aria-labelledby="profile-tab">
+                    <form method="POST" action="/admin/add" >
+                        <div class="form-group" >
+                            <label for="addname">UserName</label>
+                            <input type="text" name="addname"  class="form-control" id="addname" >
+                        </div>
+                        <div class="form-group">
+                            <label for="addlastname">LastName</label>
+                            <input type="text" name = "addlastname" class="form-control" id="addlastname" >
+                        </div>
+                        <div class="form-group">
+                            <label for="addemail">Email address</label>
+                            <input type="text" name = "addemail" class="form-control" id="addemail" >
+                        </div>
+                        <div class="form-group">
+                            <label for="addpassword">Password</label>
+                            <input type="text" name="addpassword" class="form-control" id="addpassword">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+               <div class="myForm">
+                   <form th:action="@{/admin/edit}" th:method="PATCH">
+                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog" role="document">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                                   <h5 class="modal-title" id="exampleModalLabel">edit</h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                   </button>
+                               </div>
+                               <div class="modal-body">
+                                       <div class="form-group">
+                                           <label for="id" class="col-form-label">id:</label>
+                                           <input type="text" class="form-control" id="id" name="id" value="">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="username" class="col-form-label">username:</label>
+                                           <input type="text" class="form-control" id="username" name="username" value="">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="lastname" class="col-form-label">lastname:</label>
+                                           <input type="text" class="form-control" id="lastname" name="lastname" value="">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="email" class="col-form-label">email:</label>
+                                           <input type="text" class="form-control" id="email" name="email" value="">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="password" class="col-form-label">password:</label>
+                                           <input type="text" class="form-control" id="password" name="password" value="">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="roles" class="col-form-label">roles:</label>
+                                           <input type="text" class="form-control" id="roles" name="roles" value="">
+                                       </div>
+                               </div>
+                               <div class="modal-footer">
+                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                   <input type="submit" class="btn btn-primary" value="save"/>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   </form>
+               </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script>
+    $(document).ready(function (){
+
+        $('.table .eBtn').on('click',function (event){
+            event.preventDefault();
+            var href = $(this).attr('href');
+
+            $.get(href, function(user){
+                $('.myForm #id').val(user.id);
+                $('.myForm #username').val(user.username);
+                $('.myForm #lastname').val(user.lastname);
+                $('.myForm #email').val(user.email);
+                $('.myForm #password').val(user.password);
+                $('.myForm #roles').val(user.authorities.map(e => e.authority).join(','));
+            });
+            $('.myForm #exampleModal').modal();
+        });
+    });
+</script>
+</body>
+</html>

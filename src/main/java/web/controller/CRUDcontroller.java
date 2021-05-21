@@ -3,15 +3,11 @@ package web.controller;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import web.model.Role;
 import web.model.User;
 import web.service.UserService;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/admin")
@@ -27,10 +23,10 @@ public class CRUDcontroller {
 
     CRUDcontroller(){
     }
-    @GetMapping(value = "/users")
+    @GetMapping(value = "/adminPage")
     public ModelAndView listUsers(Authentication authentication){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/users");
+        modelAndView.setViewName("/adminPage");
         modelAndView.addObject("users", userService.userList());
         return modelAndView;
     }
@@ -43,18 +39,14 @@ public class CRUDcontroller {
 
 
     @GetMapping(value = "/edit/{id}")
-    public ModelAndView editPage(@PathVariable("id") Long id){
-        User user = userService.findUserById(id);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("editPage.html");
-        modelAndView.addObject("user",user);
-        return modelAndView;
+    public User editPage(@PathVariable("id") Long id){
+        return userService.findUserById(id);
     }
 
     @PatchMapping(value = "/edit")
     public ModelAndView editUser(@ModelAttribute User user){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/admin/users");
+        modelAndView.setViewName("redirect:/admin/adminPage");
         user.setRoles(userService.findUserById(user.getId()).getRoles());
         userService.saveUser(user);
         return modelAndView;
@@ -72,7 +64,7 @@ public class CRUDcontroller {
         user.setPassword(password);
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/admin/users");
+        modelAndView.setViewName("redirect:/admin/adminPage");
         userService.addUser(user);
         return modelAndView;
     }
@@ -80,10 +72,18 @@ public class CRUDcontroller {
     @DeleteMapping(value = "/delete/{id}")
     public ModelAndView deleteUser(@PathVariable("id") Long id){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/admin/users");
+        modelAndView.setViewName("redirect:/admin/adminPage");
         userService.deleteUser(id);
         return modelAndView;
     }
 
-
+    @GetMapping(value = "/adminPageInfo")
+    public ModelAndView getUserPage(){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user =  userService.findByUserName(auth.getName());
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("adminPageInfo");
+        modelAndView.addObject("user", user);
+        return modelAndView;
+    }
 }

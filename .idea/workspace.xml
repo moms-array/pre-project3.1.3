@@ -9,14 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="change getAuthority">
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/addUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/authController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/authController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/handler/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/handler/LoginSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/authController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/authController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/security/handler/LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/handler/LoginSuccessHandler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +68,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1sPC1wyoYrvtpbCVzxxrlI3fmNn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -73,7 +89,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,7 +101,12 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="web" />
+      <recent name="web." />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\khaly\IdeaProjects\pre-project3.1.2\src\main\resources\templates" />
       <recent name="C:\Users\khaly\IdeaProjects\spring-boot\src\main\java\web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -100,7 +121,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="SpringCrudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringCrudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="spring-mvc" />
       <extension name="coverage">
         <pattern>
@@ -116,11 +137,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.SpringCrudApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBeansView">
@@ -146,10 +162,10 @@
       <workItem from="1621149429400" duration="1222000" />
       <workItem from="1621258131961" duration="923000" />
       <workItem from="1621261832844" duration="2598000" />
-      <workItem from="1621322443617" duration="33594000" />
-      <workItem from="1621407957060" duration="40864000" />
-      <workItem from="1621492658849" duration="14379000" />
-      <workItem from="1621520431185" duration="10839000" />
+      <workItem from="1621265198967" duration="888000" />
+      <workItem from="1621318027764" duration="2693000" />
+      <workItem from="1621591015035" duration="152000" />
+      <workItem from="1621591227243" duration="5120000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -207,28 +223,7 @@
       <option name="project" value="LOCAL" />
       <updated>1621083043730</updated>
     </task>
-    <task id="LOCAL-00009" summary="change getAuthority">
-      <created>1621350385944</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1621350385944</updated>
-    </task>
-    <task id="LOCAL-00010" summary="change getAuthority">
-      <created>1621350395061</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1621350395061</updated>
-    </task>
-    <task id="LOCAL-00011" summary="change getAuthority">
-      <created>1621508464787</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1621508464787</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,33 +248,26 @@
     <MESSAGE value="second" />
     <MESSAGE value="добавил fetch eager&#10;добавил секьюрность userDeatailsService&#10;поправил контроллер с crud на доступ только для админа" />
     <MESSAGE value="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий" />
-    <MESSAGE value="change getAuthority" />
-    <option name="LAST_COMMIT_MESSAGE" value="change getAuthority" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/controller/authController.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="49" />
+          <url>file://$PROJECT_DIR$/src/main/java/web/controller/UserController.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="51" />
+          <line>55</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="web.controller.CRUDcontroller" memberName="userService" />
-        <PinnedItemInfo parentTag="org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor" memberName="beanFactory" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

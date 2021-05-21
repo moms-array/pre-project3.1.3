@@ -32,7 +32,7 @@
 <div class = "container-fluid">
     <div class = "row">
         <div class="col-md-2">
-            <div><a th:href="@{/user/userPage}">User</a></div>
+            <div><a th:href="@{/admin/adminPageInfo}">User</a></div>
             <div><a href=" " >Admin </a> </div>
         </div>
         <div class="col-md-10">
@@ -72,7 +72,7 @@
                                             <button  type="button" th:href="@{/admin/findOne/(id = ${user.id})}" class="btn btn-primary eBtn" >edit</button>
                                         </td>
                                         <td>
-                                            <form id = "delete" th:action="@{/admin/delete/{id}(id = ${user.getId()})}" method="get">
+                                            <form id = "delete" th:action="@{/admin/delete/{id}(id = ${user.getId()})}" th:method="delete">
                                                 <button type="submit" class="btn-danger" >delete</button>
                                             </form>
                                         </td>
@@ -109,7 +109,7 @@
                 </div>
             </div>
                <div class="myForm">
-                   <form th:action="@{/admin/edit}" method="post">
+                   <form th:action="@{/admin/edit}" th:method="PATCH">
                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                        <div class="modal-dialog" role="document">
                            <div class="modal-content">
@@ -177,20 +177,11 @@
                 $('.myForm #lastname').val(user.lastname);
                 $('.myForm #email').val(user.email);
                 $('.myForm #password').val(user.password);
-                $('.myForm #roles').val(user.roles);
+                $('.myForm #roles').val(user.authorities.map(e => e.authority).join(','));
             });
             $('.myForm #exampleModal').modal();
         });
     });
-    // $('#exampleModal').on('show.bs.modal', function (event) {
-    //     var button = $(event.relatedTarget) // Button that triggered the modal
-    //     var recipient = button.data('whatever') // Extract info from data-* attributes
-    //     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    //     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    //     var modal = $(this)
-    //     modal.find('.modal-title').text('New message to ' + recipient)
-    //     modal.find('.modal-body input').val(recipient)
-    // })
 </script>
 </body>
 </html>

@@ -69,8 +69,8 @@ public class CRUDcontroller {
         return modelAndView;
     }
 
-    @DeleteMapping(value = "/delete/{id}")
-    public ModelAndView deleteUser(@PathVariable("id") Long id){
+    @DeleteMapping(value = "/delete")
+    public ModelAndView deleteUser(@RequestParam("id") Long id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/admin/adminPage");
         userService.deleteUser(id);

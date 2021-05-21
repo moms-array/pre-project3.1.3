@@ -72,9 +72,10 @@
                                             <button  type="button" th:href="@{/admin/findOne/(id = ${user.id})}" class="btn btn-primary eBtn" >edit</button>
                                         </td>
                                         <td>
-                                            <form id = "delete" th:action="@{/admin/delete/{id}(id = ${user.getId()})}" th:method="delete">
-                                                <button type="submit" class="btn-danger" >delete</button>
-                                            </form>
+                                            <button type="button" th:href="@{/admin/findOne/(id = ${user.id})}" class="btn btn-danger deleteBtn">delete</button>
+<!--                                            <form id = "delete" th:action="@{/admin/delete/{id}(id = ${user.getId()})}" th:method="delete">-->
+<!--                                                <button type="submit" class="btn-danger" >delete</button>-->
+<!--                                            </form>-->
                                         </td>
 
                                     </tr>
@@ -108,7 +109,7 @@
                     </form>
                 </div>
             </div>
-               <div class="myForm">
+                <div class="editForm">
                    <form th:action="@{/admin/edit}" th:method="PATCH">
                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                        <div class="modal-dialog" role="document">
@@ -154,7 +155,54 @@
                    </div>
                    </form>
                </div>
+                <div class="deleteForm">
+                <form th:action="@{/admin/delete/}" th:method="DELETE">
+                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">edit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="id" class="col-form-label">id:</label>
+                                        <input type="text" class="form-control" id="id1" name="id" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username" class="col-form-label">username:</label>
+                                        <input type="text" class="form-control" id="username1" name="username" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname" class="col-form-label">lastname:</label>
+                                        <input type="text" class="form-control" id="lastname1" name="lastname" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="col-form-label">email:</label>
+                                        <input type="text" class="form-control" id="email1" name="email" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="col-form-label">password:</label>
+                                        <input type="text" class="form-control" id="password1" name="password" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="roles" class="col-form-label">roles:</label>
+                                        <input type="text" class="form-control" id="roles1" name="roles" value="">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <input type="submit" class="btn btn-danger" value="delete"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
+
+        </div>
 
         </div>
     </div>
@@ -172,14 +220,31 @@
             var href = $(this).attr('href');
 
             $.get(href, function(user){
-                $('.myForm #id').val(user.id);
-                $('.myForm #username').val(user.username);
-                $('.myForm #lastname').val(user.lastname);
-                $('.myForm #email').val(user.email);
-                $('.myForm #password').val(user.password);
-                $('.myForm #roles').val(user.authorities.map(e => e.authority).join(','));
+                $('.editForm #id').val(user.id);
+                $('.editForm #username').val(user.username);
+                $('.editForm #lastname').val(user.lastname);
+                $('.editForm #email').val(user.email);
+                $('.editForm #password').val(user.password);
+                $('.editForm #roles').val(user.authorities.map(e => e.authority).join(','));
             });
-            $('.myForm #exampleModal').modal();
+            $('.editForm #exampleModal').modal();
+        });
+    });
+    $(document).ready(function (){
+
+        $('.table .deleteBtn').on('click',function (event){
+            event.preventDefault();
+            var href = $(this).attr('href');
+
+            $.get(href, function(user){
+                $('.deleteForm #id1').val(user.id);
+                $('.deleteForm #username1').val(user.username);
+                $('.deleteForm #lastname1').val(user.lastname);
+                $('.deleteForm #email1').val(user.email);
+                $('.deleteForm #password1').val(user.password);
+                $('.deleteForm #roles1').val(user.authorities.map(e => e.authority).join(','));
+            });
+            $('.deleteForm #deleteModal').modal();
         });
     });
 </script>

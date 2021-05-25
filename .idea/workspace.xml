@@ -9,12 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="далил лишние html, &#10;сфорировал лк для админ и для юзера">
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/model/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,13 +79,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="database.main" />
@@ -105,7 +110,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringCrudApplication">
+    <configuration name="Unnamed" type="NodeJSConfigurationType" path-to-node="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="SpringCrudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="spring-mvc" />
       <extension name="coverage">
@@ -122,6 +130,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Node.js.Unnamed" />
+      <item itemvalue="Spring Boot.SpringCrudApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBeansView">
@@ -151,6 +163,12 @@
       <workItem from="1621318027764" duration="2693000" />
       <workItem from="1621591015035" duration="152000" />
       <workItem from="1621591227243" duration="10052000" />
+      <workItem from="1621618340132" duration="7257000" />
+      <workItem from="1621756009755" duration="1862000" />
+      <workItem from="1621776376444" duration="14056000" />
+      <workItem from="1621793859803" duration="3298000" />
+      <workItem from="1621840444064" duration="41272000" />
+      <workItem from="1621925262005" duration="18310000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -222,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621596911958</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования">
+      <created>1621629185804</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621629185804</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +273,8 @@
     <MESSAGE value="добавил fetch eager&#10;добавил секьюрность userDeatailsService&#10;поправил контроллер с crud на доступ только для админа" />
     <MESSAGE value="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий" />
     <MESSAGE value="далил лишние html, &#10;сфорировал лк для админ и для юзера" />
-    <option name="LAST_COMMIT_MESSAGE" value="далил лишние html, &#10;сфорировал лк для админ и для юзера" />
+    <MESSAGE value="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -259,24 +285,14 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
           <line>29</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

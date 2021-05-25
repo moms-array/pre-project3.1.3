@@ -1,5 +1,8 @@
 package web.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -14,7 +17,7 @@ public class Role implements GrantedAuthority {
     private long id;
     private String role;
 
-    @JsonManagedReference
+    @JsonIgnoreProperties("roles")
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
 

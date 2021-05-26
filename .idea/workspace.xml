@@ -9,16 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="удалил @ResponseBody из контроллера&#10;разделил обычные контроллеры и рест&#10;добавил ResponeEntity в userList()&#10;заменил GenerationType.AUTO на IDENTITY&#10;переименовал saveUser в update&#10;убрал возвращаемое значение в методах deleteUser() и update()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/authController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/authController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +162,7 @@
       <workItem from="1621840444064" duration="41272000" />
       <workItem from="1621925262005" duration="19616000" />
       <workItem from="1621948456656" duration="80000" />
-      <workItem from="1622058631013" duration="3461000" />
+      <workItem from="1622058631013" duration="4302000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -256,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621945864161</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="удалил @ResponseBody из контроллера&#10;разделил обычные контроллеры и рест&#10;добавил ResponeEntity в userList()&#10;заменил GenerationType.AUTO на IDENTITY&#10;переименовал saveUser в update&#10;убрал возвращаемое значение в методах deleteUser() и update()">
+      <created>1622062354412</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1622062354412</updated>
+    </task>
+    <task id="LOCAL-00014" summary="удалил @ResponseBody из контроллера&#10;разделил обычные контроллеры и рест&#10;добавил ResponeEntity в userList()&#10;заменил GenerationType.AUTO на IDENTITY&#10;переименовал saveUser в update&#10;убрал возвращаемое значение в методах deleteUser() и update()">
+      <created>1622062378048</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622062378048</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +289,8 @@
     <MESSAGE value="удалил конфиги с бд&#10;удалил файл db.properties&#10;создал папку в /resources/templates&#10;перенес все html в /resources/templates&#10;добавил в resources/application.properties&#10;добавил точку входа класс SpringCrudApplication с аннотацией @SpringBootApplication&#10;изменил все зависимости на boot с автоподкачкой версий" />
     <MESSAGE value="далил лишние html, &#10;сфорировал лк для админ и для юзера" />
     <MESSAGE value="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования" />
+    <MESSAGE value="удалил @ResponseBody из контроллера&#10;разделил обычные контроллеры и рест&#10;добавил ResponeEntity в userList()&#10;заменил GenerationType.AUTO на IDENTITY&#10;переименовал saveUser в update&#10;убрал возвращаемое значение в методах deleteUser() и update()" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалил @ResponseBody из контроллера&#10;разделил обычные контроллеры и рест&#10;добавил ResponeEntity в userList()&#10;заменил GenerationType.AUTO на IDENTITY&#10;переименовал saveUser в update&#10;убрал возвращаемое значение в методах deleteUser() и update()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

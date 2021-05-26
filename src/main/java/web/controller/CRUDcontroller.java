@@ -28,17 +28,4 @@ public class CRUDcontroller {
         modelAndView.addObject("user", user);
         return modelAndView;
     }
-//    @ResponseBody - зачем?+
-//    userList() не использует ResponseEntity+
-//    разделить контроллеры на Rest и обычный+
-//    GenerationType.AUTO заменить на Identity+
-//    UserRepository userRepository; - использовать модификатор
-//
-//
-//    сделать вот так:
-//    User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();+
-//
-//    зачем вообще нужны true/false при апдейте пользователя? (в saveUser методе сервиса и метод
-//    лучше переименовать на update, а то по названию не совсем понятно, что там происходит+
-
 }

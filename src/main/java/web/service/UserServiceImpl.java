@@ -26,25 +26,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean saveUser(User user){
+    public void update(User user){
         User userFromBd = null;
         if(userRepository.findById(user.getId()).isPresent()) {
             userFromBd = userRepository.findById(user.getId()).get();
         }
-        if(userFromBd == null){
-            return false;
+        if(userFromBd != null){
+            userRepository.save(user);
         }
-        userRepository.save(user);
-        return true;
     }
 
     @Override
-    public boolean deleteUser(Long id){
+    public void deleteUser(Long id){
         if(userRepository.findById(id).isPresent()){
             userRepository.deleteById(id);
-            return true;
         }
-        return false;
     }
 
     @Override

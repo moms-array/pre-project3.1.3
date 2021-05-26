@@ -5,15 +5,15 @@ import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import web.model.User;
 import web.service.UserService;
 
 
-@RestController
+@Controller
 @RequestMapping("/user")
 @Log
 public class UserController {
@@ -32,13 +32,6 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("userPage");
         modelAndView.addObject("user", user);
-        return modelAndView;
-    }
-
-    @GetMapping(value = "/index")
-    public ModelAndView mainPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
         return modelAndView;
     }
 }

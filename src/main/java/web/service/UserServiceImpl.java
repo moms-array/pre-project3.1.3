@@ -50,7 +50,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(User user){
-        user.setRoles(Collections.singleton(new Role(2L,"USER")));
         userRepository.save(user);
     }
 

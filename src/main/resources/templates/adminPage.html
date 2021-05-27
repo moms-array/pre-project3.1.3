@@ -88,6 +88,10 @@
                     <input class="form-control" id="lastname" type="text" placeholder="lastname"><br>
                     <input class="form-control" id="email" type="text" placeholder="email"><br>
                     <input class="form-control" id="password" type="text" placeholder="password"><br>
+                    <select class="form-control" id="role" name="role" >
+                        <option value= 1>ADMIN</option>
+                        <option value = 2>USER</option>
+                    </select>
                 </form>
             </div>
 
@@ -321,18 +325,29 @@
     async function addUser(){
 
             $('#newUser').find('#addNewUserButton').on('click',async ()=>{
+                let roles;
                 let addForm = $('#userForm');
                 let username = addForm.find('#username').val().trim();
                 let lastname = addForm.find('#lastname').val().trim();
                 let email = addForm.find('#email').val().trim();
                 let password = addForm.find('#password').val().trim();
+                let role = addForm.find('#role').val().trim();
+                if (role == 1){
+                    roles = [{"id":1,"role":"ROLE_ADMIN","authority":"ROLE_ADMIN"}];
+                } else {
+                    roles = [{"id":2,"role":"ROLE_USER","authority":"ROLE_USER"}];
+                }
+                console.log(roles)
+
 
                 const data = {
                     username: username,
                     lastname: lastname,
                     email: email,
-                    password: password
+                    password: password,
+                    roles: roles,
                 }
+                console.log(data)
                 let response = await userFetchService.addNewUser(data);
                 if (response.ok) {
                     await getTableWithUsers();

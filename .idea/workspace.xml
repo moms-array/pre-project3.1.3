@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="добавил private final" />
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="догрузил REST">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,6 +165,7 @@
       <workItem from="1621925262005" duration="19616000" />
       <workItem from="1621948456656" duration="80000" />
       <workItem from="1622058631013" duration="4615000" />
+      <workItem from="1622118128991" duration="11039000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -266,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622063011729</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="догрузил REST">
+      <created>1622118213318</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1622118213318</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,20 +308,16 @@
     <MESSAGE value="добавил rest контроллер для получения всех юзеров&#10;реализовал fetch вывод таблицы с присвоением каждому полю id + добавил кнопки удаления и редактирования" />
     <MESSAGE value="удалил @ResponseBody из контроллера&#10;разделил обычные контроллеры и рест&#10;добавил ResponeEntity в userList()&#10;заменил GenerationType.AUTO на IDENTITY&#10;переименовал saveUser в update&#10;убрал возвращаемое значение в методах deleteUser() и update()" />
     <MESSAGE value="добавил private final" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил private final" />
+    <MESSAGE value="догрузил REST" />
+    <option name="LAST_COMMIT_MESSAGE" value="догрузил REST" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/src/main/java/web/controller/AdminRestController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -317,6 +326,11 @@
         <PinnedItemInfo parentTag="web.controller.CRUDcontroller" memberName="userService" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="param_2" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pre_project2_3_1Entity$Tomcat_9_0_45.ic" NAME="Tomcat 9.0.45 Coverage Results" MODIFIED="1620767882974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

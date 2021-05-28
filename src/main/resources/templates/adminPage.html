@@ -11,7 +11,7 @@
     <title></title>
 
 </head>
-<body>
+<body >
 <div th:fragment="footer">
     <div class="container-fluid" style="background-color: black">
         <div class="p-3 text-white">
@@ -26,15 +26,20 @@
         </div>
     </div>
 </div>
-
-
-<div class = "container-fluid">
-    <div class = "row">
-        <div class="col-md-2">
-            <div><a th:href="@{/admin/adminPageInfo}">User</a></div>
-            <div><a href=" " >Admin </a> </div>
+<div class = "container-fluid" >
+    <div class = "row ">
+        <div class="col-md-2" style="min-height:1200px; height: auto; background-color: white">
+            <ul class="nav flex-column nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link " th:href="@{/admin/adminPageInfo}">User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Admin</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10" style="min-height:1200px; height: auto; background-color: #e4fffa">
+            <h2>Admin Panel</h2>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#AllUsers" role="tab" aria-controls="home" aria-selected="true">All users</a>
@@ -103,7 +108,7 @@
     </div>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="myModalLabel">modal-title</h5>
@@ -235,8 +240,8 @@
         user.then(user => {
             let bodyForm = `
             <form class="form-group" id="editUser">
-                <a>id</a>
-                <input type="text" class="form-control" id="id" name="id" value="${user.id}" disabled><br>
+                <a >id</a>
+                <input  type="text" class="form-control" id="id" name="id" value="${user.id}" disabled><br>
                 <a>Username</a>
                 <input class="form-control" type="text" id="username" value="${user.username}"><br>
                 <a>Lastname</a>
@@ -245,6 +250,11 @@
                 <input class="form-control" type="text" id="email" value="${user.email}"><br>
                 <a>Password</a>
                 <input class="form-control" type="text" id="password" value="${user.password}"><br>
+                <select class="form-control" id="role" name="role" >
+                        <option value= 1>ADMIN</option>
+                        <option value = 2>USER</option>
+                </select>
+
             </form>
         `;
             modal.find('.modal-body').append(bodyForm);
@@ -257,6 +267,13 @@
             let lastname = modal.find("#lastname").val().trim();
             let email = modal.find("#email").val().trim();
             let password = modal.find("#password").val().trim();
+            let role = modal.find('#role').val().trim();
+            let roles;
+            if (role == 1){
+                roles = [{"id":1,"role":"ROLE_ADMIN","authority":"ROLE_ADMIN"}];
+            } else {
+                roles = [{"id":2,"role":"ROLE_USER","authority":"ROLE_USER"}];
+            }
 
             let data = {
                 id: id,
@@ -264,6 +281,7 @@
                 lastname: lastname,
                 email: email,
                 password: password,
+                roles: roles,
             }
 
             const response = await userFetchService.updateUser(data);
@@ -310,6 +328,9 @@
                 <output class="form-control" type="text" id="email" >${user.email}</output><br>
                 <a>Password</a>
                 <output class="form-control" type="text" id="password" >${user.password}</output><br>
+                <a>Roles</a>
+                <output class="form-control" type="text" id="roles" >${user.roles.map(e=>e.role)}</output><br>
+
             </form>
         `;
             modal.find('.modal-body').append(bodyForm);

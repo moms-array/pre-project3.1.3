@@ -60,7 +60,6 @@
                             <th>Name</th>
                             <th>Lastname</th>
                             <th>email</th>
-                            <th>password</th>
                             <th>roles</th>
                             </thead>
                             <tbody  id = "userTable">
@@ -77,19 +76,19 @@
                     <form style="width: 350px; margin-left: auto; margin-right: auto; text-align: center" id = "userForm">
                         <div class="form-group" >
                             <label for="addUsername">UserName</label>
-                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addUsername" value="username">
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addUsername" value="">
                         </div>
                         <div class="form-group">
                             <label for="addLastname">LastName</label>
-                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addLastname" value="lastname">
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addLastname" value="">
                         </div>
                         <div class="form-group">
                             <label for="addEmail">Email address</label>
-                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addEmail" value="email">
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addEmail" value="">
                         </div>
                         <div class="form-group">
                             <label for="addPassword">Password</label>
-                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addPassword" value="password">
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addPassword" value="">
                         </div>
                         <a>Role</a>
                         <select style="background-color: #fff3b8" class="form-control" id="addRole" name="role" >
@@ -172,7 +171,6 @@
                             <td>${user.username}</td>
                             <td>${user.lastname}</td>
                             <td>${user.email}</td>
-                            <td>${user.password}</td>
                             <td>${user.authorities.map(e => e.authority)}</td>
                             <td>
                                 <button type="button" data-userid="${user.id}" data-action="edit" class="btn btn-primary"
@@ -249,7 +247,8 @@
                 <a>Email</a>
                 <input class="form-control" type="text" id="email" value="${user.email}"><br>
                 <a>Password</a>
-                <input class="form-control" type="text" id="password" value="${user.password}"><br>
+                <input class="form-control" type="text" id="password" value=""><br>
+                <a>Role</a>
                 <select class="form-control" id="role" name="role" >
                         <option value= 1>ADMIN</option>
                         <option value = 2>USER</option>
@@ -326,8 +325,6 @@
                 <output class="form-control" type="text" id="lastname" >${user.lastname}</output><br>
                 <a>Email</a>
                 <output class="form-control" type="text" id="email" >${user.email}</output><br>
-                <a>Password</a>
-                <output class="form-control" type="text" id="password" >${user.password}</output><br>
                 <a>Roles</a>
                 <output class="form-control" type="text" id="roles" >${user.roles.map(e=>e.role)}</output><br>
 
@@ -370,10 +367,10 @@
                 if (response.ok) {
                     $('#myTab a:first').tab('show');
                     await getTableWithUsers();
-                    addForm.find('#username').val('');
-                    addForm.find('#lastname').val('');
-                    addForm.find('#email').val('');
-                    addForm.find('#password').val('');
+                    addForm.find('#addUsername').val('');
+                    addForm.find('#addLastname').val('');
+                    addForm.find('#addEmail').val('');
+                    addForm.find('#addPassword').val('');
                 }
             });
     }

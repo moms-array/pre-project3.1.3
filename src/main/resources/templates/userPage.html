@@ -33,7 +33,7 @@
 
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-10" style="min-height:1200px; height: auto; background-color: #e4fffa">
             <h1 th:text = "${user.getUsername()} + ' information page'"> </h1>
             <div class="tab-content">
                     <table class="table table-hover">
@@ -46,7 +46,7 @@
                         <th>password</th>
                         <th>roles</th>
 
-                <tr th:each="user, state:${user}">
+                <tr th:each="user, state:${user}" style="background-color: white">
                     <th th:text="${user.id}">id</th>
                     <td th:text="${user.username}">name</td>
                     <td th:text="${user.lastname}">lastname</td>

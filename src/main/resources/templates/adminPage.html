@@ -45,9 +45,8 @@
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#AllUsers" role="tab" aria-controls="home" aria-selected="true">All users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="modal" href = "#newUser" role="tab" aria-controls="profile" aria-selected="false">New user</a>
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#NewUser" role="tab" aria-controls="profile" aria-selected="false">New user</a>
                 </li>
-
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="AllUsers" role="tabpanel" aria-labelledby="home-tab">
@@ -72,37 +71,38 @@
                 </div>
                 </div>
                 </div>
-
+                <div class="tab-pane" id="NewUser" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="container-fluid border border-1" style="border: #9e9ba1" >
+                        <div class="align-items-center">
+                    <form style="width: 350px; margin-left: auto; margin-right: auto; text-align: center" id = "userForm">
+                        <div class="form-group" >
+                            <label for="addUsername">UserName</label>
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addUsername" value="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="addLastname">LastName</label>
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addLastname" value="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="addEmail">Email address</label>
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addEmail" value="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="addPassword">Password</label>
+                            <input style="background-color: #fff3b8" class="form-control" type="text" id="addPassword" value="password">
+                        </div>
+                        <a>Role</a>
+                        <select style="background-color: #fff3b8" class="form-control" id="addRole" name="role" >
+                            <option value= 1>ADMIN</option>
+                            <option value = 2>USER</option>
+                        </select>
+                        <br>
+                        <button class="btn btn-primary mb-2" type="button" id="addNewUserButton">Add new user</button>
+                    </form>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="newUserLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="newUserLabel"> add user </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id = "userForm">
-                    <input class="form-control" id="username" type="text" placeholder="username"><br>
-                    <input class="form-control" id="lastname" type="text" placeholder="lastname"><br>
-                    <input class="form-control" id="email" type="text" placeholder="email"><br>
-                    <input class="form-control" id="password" type="text" placeholder="password"><br>
-                    <select class="form-control" id="role" name="role" >
-                        <option value= 1>ADMIN</option>
-                        <option value = 2>USER</option>
-                    </select>
-                </form>
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-primary mb-2" type="button" id="addNewUserButton">Add new user</button>
-
+                </div>
             </div>
         </div>
     </div>
@@ -345,22 +345,19 @@
     }
     async function addUser(){
 
-            $('#newUser').find('#addNewUserButton').on('click',async ()=>{
+            $('#userForm').find('#addNewUserButton').on('click',async ()=>{
                 let roles;
                 let addForm = $('#userForm');
-                let username = addForm.find('#username').val().trim();
-                let lastname = addForm.find('#lastname').val().trim();
-                let email = addForm.find('#email').val().trim();
-                let password = addForm.find('#password').val().trim();
-                let role = addForm.find('#role').val().trim();
+                let username = addForm.find('#addUsername').val();
+                let lastname = addForm.find('#addLastname').val()
+                let email = addForm.find('#addEmail').val()
+                let password = addForm.find('#addPassword').val()
+                let role = addForm.find('#addRole').val()
                 if (role == 1){
                     roles = [{"id":1,"role":"ROLE_ADMIN","authority":"ROLE_ADMIN"}];
                 } else {
                     roles = [{"id":2,"role":"ROLE_USER","authority":"ROLE_USER"}];
                 }
-                console.log(roles)
-
-
                 const data = {
                     username: username,
                     lastname: lastname,
@@ -371,12 +368,12 @@
                 console.log(data)
                 let response = await userFetchService.addNewUser(data);
                 if (response.ok) {
+                    $('#myTab a:first').tab('show');
                     await getTableWithUsers();
                     addForm.find('#username').val('');
                     addForm.find('#lastname').val('');
                     addForm.find('#email').val('');
                     addForm.find('#password').val('');
-                    $('#newUser').modal('hide');
                 }
             });
     }

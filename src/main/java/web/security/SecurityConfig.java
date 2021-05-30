@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import web.security.handler.LoginSuccessHandler;
 
@@ -29,9 +30,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private LoginSuccessHandler loginSuccessHandler;
 
+
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authProvider).userDetailsService(getuserDetailService());
+        auth.authenticationProvider(authProvider).userDetailsService(getuserDetailService()).passwordEncoder(passwordEncoder());
     }
 
 
@@ -50,15 +52,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new PasswordEncoder() {
-            @Override
-            public String encode(CharSequence rawPassword) {
-                return BCrypt.hashpw(rawPassword.toString(), BCrypt.gensalt(4));
-            }
-
-            @Override
-            public boolean matches(CharSequence rawPassword, String encodedPassword) {
-                return BCrypt.checkpw(rawPassword.toString(), encodedPassword);            }
-        };
+        return new BCryptPasswordEncoder();
     }
 }

@@ -9,13 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="поправил метод UserServiceImpl.update">
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="добавил выбор роле при редактирвоании и добавлении пользователя. Добавил вывод роле в модальное окно DELETE&#10;добавил заливку страницы, разделенную на 2 части&#10;добавил цвет при наведении на nav bar &quot;ADMIN&quot; &quot;USER&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/MyUserDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminPageInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPageInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminPageInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminPageInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/security/AuthProviderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/AuthProviderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/security/MyUserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/MyUserDetailService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
     </list>
@@ -174,7 +180,8 @@
       <workItem from="1622142680638" duration="433000" />
       <workItem from="1622144493808" duration="916000" />
       <workItem from="1622183929666" duration="973000" />
-      <workItem from="1622208708283" duration="16299000" />
+      <workItem from="1622208708283" duration="24212000" />
+      <workItem from="1622376591495" duration="14420000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -295,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622131166495</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="добавил выбор роле при редактирвоании и добавлении пользователя. Добавил вывод роле в модальное окно DELETE&#10;добавил заливку страницы, разделенную на 2 части&#10;добавил цвет при наведении на nav bar &quot;ADMIN&quot; &quot;USER&quot;">
+      <created>1622230333953</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1622230333953</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +340,8 @@
     <MESSAGE value="добавил private final" />
     <MESSAGE value="догрузил REST" />
     <MESSAGE value="поправил метод UserServiceImpl.update" />
-    <option name="LAST_COMMIT_MESSAGE" value="поправил метод UserServiceImpl.update" />
+    <MESSAGE value="добавил выбор роле при редактирвоании и добавлении пользователя. Добавил вывод роле в модальное окно DELETE&#10;добавил заливку страницы, разделенную на 2 части&#10;добавил цвет при наведении на nav bar &quot;ADMIN&quot; &quot;USER&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил выбор роле при редактирвоании и добавлении пользователя. Добавил вывод роле в модальное окно DELETE&#10;добавил заливку страницы, разделенную на 2 части&#10;добавил цвет при наведении на nav bar &quot;ADMIN&quot; &quot;USER&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -334,7 +349,27 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/controller/AdminRestController.java</url>
           <line>35</line>
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/security/MyUserDetailService.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -345,7 +380,6 @@
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="param_2" />
         <watch expression="user" />
       </configuration>
     </watches-manager>

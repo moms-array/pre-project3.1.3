@@ -4,27 +4,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
 import web.repository.UserRepository;
+import web.service.UserService;
+import web.service.UserServiceImpl;
 
 
 @Component
 public class MyUserDetailService implements UserDetailsService {
 
-
-    UserRepository userRepository;
+    @Autowired
+    UserService userService;
 
     public MyUserDetailService(){}
 
-    @Autowired
-    public MyUserDetailService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+
+    public MyUserDetailService(UserServiceImpl userService) {
+        this.userService = userService;
     }
 
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
+        User user = userService.findByUserName(username);
         if(user == null){
             throw new UsernameNotFoundException("not found ");
         }

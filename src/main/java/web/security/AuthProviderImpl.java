@@ -8,6 +8,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
@@ -19,12 +20,15 @@ import java.util.List;
 @Component
 public class AuthProviderImpl implements AuthenticationProvider {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
 
     @Autowired
-    public void setUserRepository(UserRepository userRepository) {
+    public AuthProviderImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
+
 
     @Override
     @Transactional
@@ -35,7 +39,7 @@ public class AuthProviderImpl implements AuthenticationProvider {
         if (user == null){
             throw new UsernameNotFoundException("user not found");
         }
-        String password = authentication.getCredentials().toString();
+        String password =authentication.getCredentials().toString();
         if (!password.equals(user.getPassword())){
             throw new BadCredentialsException("bad credentials");
         }

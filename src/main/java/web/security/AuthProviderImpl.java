@@ -28,8 +28,6 @@ public class AuthProviderImpl implements AuthenticationProvider {
         this.userRepository = userRepository;
     }
 
-
-
     @Override
     @Transactional
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {

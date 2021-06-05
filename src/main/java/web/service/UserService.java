@@ -1,15 +1,16 @@
 package web.service;
 
+import web.DTO.UserDTO;
 import web.model.User;
 
 import java.util.List;
 
 public interface UserService {
-    User findUserById(Long id);
-    void update(User user);
+    UserDTO findUserById(Long id);
+    void update(UserDTO userDTO);
     void deleteUser(Long id);
-    List<User> userList();
-    void addUser(User user);
+    List<UserDTO> userList();
+    void addUser(UserDTO userDTO);
     User findByUserName(String name);
 
 }

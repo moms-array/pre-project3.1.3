@@ -9,15 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="добавил @Query(from User) над методом test() для получения списка пользователей и их ролей">
+    <list default="true" id="41f1c335-3789-4504-9e49-0161fd5659d1" name="Default Changelist" comment="добавил в запрос distinct и fetch join">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4429d3f4-86e9-4a4c-8f27-2fd3cedec340.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4429d3f4-86e9-4a4c-8f27-2fd3cedec340.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/AdminRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/AdminRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/CRUDcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/AuthProviderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/security/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/security/MyUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminPageInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminPageInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminPageInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminPageInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/AdminRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/AdminRestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/CRUDcontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/security/AuthProviderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/AuthProviderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/security/MyUserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/security/MyUserDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +94,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pre-project3.1.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -177,6 +194,9 @@
       <workItem from="1622208708283" duration="24212000" />
       <workItem from="1622376591495" duration="29677000" />
       <workItem from="1622448373182" duration="7184000" />
+      <workItem from="1622483915947" duration="178000" />
+      <workItem from="1622805700446" duration="5043000" />
+      <workItem from="1622887880912" duration="262000" />
     </task>
     <task id="LOCAL-00001" summary="change session to entity">
       <created>1620815907082</created>
@@ -318,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622410342616</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="добавил в запрос distinct и fetch join">
+      <created>1622484062099</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1622484062100</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +379,8 @@
     <MESSAGE value="добавил выбор роле при редактирвоании и добавлении пользователя. Добавил вывод роле в модальное окно DELETE&#10;добавил заливку страницы, разделенную на 2 части&#10;добавил цвет при наведении на nav bar &quot;ADMIN&quot; &quot;USER&quot;" />
     <MESSAGE value="пароли теперь шифруются" />
     <MESSAGE value="добавил @Query(from User) над методом test() для получения списка пользователей и их ролей" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил @Query(from User) над методом test() для получения списка пользователей и их ролей" />
+    <MESSAGE value="добавил в запрос distinct и fetch join" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил в запрос distinct и fetch join" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

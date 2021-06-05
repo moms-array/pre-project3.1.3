@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import web.DTO.UserDTO;
 import web.model.User;
 import web.service.UserService;
 
@@ -21,20 +22,20 @@ public class AdminRestController {
     }
 
     @GetMapping("/findOne/{id}")
-    public ResponseEntity<User> finOne(@PathVariable("id") Long id){
+    public ResponseEntity<UserDTO> finOne(@PathVariable("id") Long id){
         return new ResponseEntity<>(userService.findUserById(id), HttpStatus.OK);
     }
 
     @PutMapping(value = "/edit")
-    public ResponseEntity<User> editUser(@RequestBody User user){
-        userService.update(user);
+    public ResponseEntity<UserDTO> editUser(@RequestBody UserDTO userDTO){
+        userService.update(userDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping(value = "/add")
-    public ResponseEntity<User> addUser(@RequestBody User user){
-        userService.addUser(user);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+    public ResponseEntity<UserDTO> addUser(@RequestBody UserDTO userDTO){
+        userService.addUser(userDTO);
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/delete/{id}")
@@ -43,7 +44,7 @@ public class AdminRestController {
     }
 
     @GetMapping("/userList")
-    public ResponseEntity<List<User>> userList(){
+    public ResponseEntity<List<UserDTO>> userList(){
         return new ResponseEntity<>(userService.userList(), HttpStatus.OK);
     }
 }

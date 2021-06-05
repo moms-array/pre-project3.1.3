@@ -11,6 +11,7 @@ import web.model.User;
 import web.repository.UserRepository;
 import web.service.UserService;
 import web.service.UserServiceImpl;
+import web.utils.MappingUtils;
 
 
 @Component
@@ -18,6 +19,8 @@ public class MyUserDetailService implements UserDetailsService {
 
     @Autowired
     UserService userService;
+    @Autowired
+    MappingUtils mappingUtils;
 
     public MyUserDetailService(){}
 

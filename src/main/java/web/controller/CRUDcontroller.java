@@ -8,16 +8,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import web.DTO.UserDTO;
 import web.model.User;
 import web.service.UserService;
+import web.utils.MappingUtils;
 
 @Controller
 @RequestMapping("/admin")
 public class CRUDcontroller {
-    @Autowired
-    UserService userService;
 
-    CRUDcontroller(){
+    UserService userService;
+    MappingUtils mappingUtils;
+
+    @Autowired
+    CRUDcontroller(MappingUtils mappingUtils, UserService userService){
+        this.mappingUtils = mappingUtils;
+        this.userService = userService;
     }
     @GetMapping(value = "/adminPage")
     public ModelAndView listUsers(){
@@ -29,10 +35,10 @@ public class CRUDcontroller {
     @GetMapping(value = "/adminPageInfo")
     public ModelAndView getUserPage(){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user =  userService.findByUserName(auth.getName());
+        UserDTO userDTO =  mappingUtils.userToUserDto(userService.findByUserName(auth.getName()));
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("adminPageInfo");
-        modelAndView.addObject("user", user);
+        modelAndView.addObject("userDTO", userDTO);
         return modelAndView;
     }
 }

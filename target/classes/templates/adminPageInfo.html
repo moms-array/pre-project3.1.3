@@ -39,10 +39,10 @@
             </ul>
         </div>
         <div class="col-md-10" style="min-height:1200px; height: auto; background-color: #e4fffa">
-            <h2 th:text = "${user.getUsername()} + ' information page'"> </h2>
+            <h2 th:text = "${userDTO.getUsername()} + ' information page'"> </h2>
             <div class="tab-content">
                 <table class="table table-hover">
-                    <div th:text="'about ' + ${user.getUsername()}"></div>
+                    <div th:text="'about ' + ${userDTO.getUsername()}"></div>
                     <thead>
                     <th>ID</th>
                     <th>Name</th>
@@ -51,12 +51,12 @@
                     <th>password</th>
                     <th>roles</th>
 
-                    <tr th:each="user, state:${user}" style="background-color: white">
-                        <th th:text="${user.id}">id</th>
-                        <td th:text="${user.username}">name</td>
-                        <td th:text="${user.lastname}">lastname</td>
-                        <td th:text="${user.email}">email</td>
-                        <td th:text="${user.password}">password</td>
+                    <tr th:each="user, state:${userDTO}" style="background-color: white">
+                        <th th:text="${userDTO.id}">id</th>
+                        <td th:text="${userDTO.username}">name</td>
+                        <td th:text="${userDTO.lastname}">lastname</td>
+                        <td th:text="${userDTO.email}">email</td>
+                        <td th:text="${userDTO.password}">password</td>
                         <td sec:authentication="principal.authorities"></td>
                     </tr>
                 </table>

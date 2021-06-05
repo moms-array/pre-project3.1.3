@@ -171,7 +171,7 @@
                             <td>${user.username}</td>
                             <td>${user.lastname}</td>
                             <td>${user.email}</td>
-                            <td>${user.authorities.map(e => e.authority)}</td>
+                            <td>${user.roles.map(e => e.authority)}</td>
                             <td>
                                 <button type="button" data-userid="${user.id}" data-action="edit" class="btn btn-primary"
                                 data-toggle="modal" data-target="#myModal">Edit</button>

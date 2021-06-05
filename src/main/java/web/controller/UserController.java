@@ -9,8 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import web.model.User;
+import web.DTO.UserDTO;
 import web.service.UserService;
+import web.utils.MappingUtils;
 
 
 @Controller
@@ -19,19 +20,21 @@ import web.service.UserService;
 public class UserController {
 
     private UserService userService;
+    private MappingUtils mappingUtils;
 
     @Autowired
-    public void setUserService(UserService userService) {
+    public UserController(UserService userService, MappingUtils mappingUtils) {
         this.userService = userService;
+        this.mappingUtils = mappingUtils;
     }
 
     @GetMapping(value = "/userPage")
     public ModelAndView getUserPage(){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user =  userService.findByUserName(auth.getName());
+        UserDTO userDTO =  mappingUtils.userToUserDto(userService.findByUserName(auth.getName()));
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("userPage");
-        modelAndView.addObject("user", user);
+        modelAndView.addObject("userDTO", userDTO);
         return modelAndView;
     }
 }
